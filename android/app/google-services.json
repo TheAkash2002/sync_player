@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475778353428",
+    "project_id": "sync-player-akm512",
+    "storage_bucket": "sync-player-akm512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475778353428:android:6426856d39ad1128f0da01",
+        "android_client_info": {
+          "package_name": "com.princeakash.sync_player"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPe5U4jy7iKgE25kKS-5ld_H5vy36QiBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
