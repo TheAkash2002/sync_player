@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sync_player/utils/permissions.dart';
 
 import '../../controller/settings.dart';
 import '../../models/models.dart';
+import '../../utils/permissions.dart';
 import '../../utils/theme.dart';
 
 class Settings extends StatelessWidget {

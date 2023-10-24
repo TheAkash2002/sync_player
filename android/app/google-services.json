@@ -12,7 +12,12 @@
           "package_name": "com.princeakash.sync_player"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "475778353428-316gs3qiig60jm90s5rrgr8d5cm3nera.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDPe5U4jy7iKgE25kKS-5ld_H5vy36QiBc"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475778353428-316gs3qiig60jm90s5rrgr8d5cm3nera.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "475778353428-0rgij0g4ra9792dm40qja27afig25npp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.princeakash.syncPlayer.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }

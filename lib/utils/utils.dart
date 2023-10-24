@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:bot_toast/bot_toast.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in_dartio/google_sign_in_dartio.dart';
 import 'package:logging/logging.dart';
 
 import '../firebase_options.dart';
@@ -12,11 +15,13 @@ import 'theme.dart';
 Future<void> initializeMainApp() async {
   configureLogger();
   WidgetsFlutterBinding.ensureInitialized();
-  try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  } catch (e) {}
+  if (!kIsWeb && (Platform.isMacOS || Platform.isWindows)) {
+    await GoogleSignInDart.register(
+        clientId: DefaultFirebaseOptions.desktopClientId);
+  }
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.top]);
   await GetStorage.init(THEME_CONTAINER);
@@ -85,3 +90,7 @@ void showToast(ToastType type, String message) {
           ));
   return;
 }
+
+String getInitials(String name) => name.isNotEmpty
+    ? name.trim().split(RegExp(' +')).map((s) => s[0]).take(2).join()
+    : '';

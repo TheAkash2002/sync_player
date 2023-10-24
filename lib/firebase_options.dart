@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -66,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '475778353428',
     projectId: 'sync-player-akm512',
     storageBucket: 'sync-player-akm512.appspot.com',
+    iosClientId:
+        '475778353428-e6i1n78vegbqvdkifsv60c0bk85npba9.apps.googleusercontent.com',
     iosBundleId: 'com.princeakash.syncPlayer',
   );
 
@@ -75,6 +74,19 @@ class DefaultFirebaseOptions {
     messagingSenderId: '475778353428',
     projectId: 'sync-player-akm512',
     storageBucket: 'sync-player-akm512.appspot.com',
+    iosClientId:
+        '475778353428-0rgij0g4ra9792dm40qja27afig25npp.apps.googleusercontent.com',
     iosBundleId: 'com.princeakash.syncPlayer.RunnerTests',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyB5SrhMNj3YDt8Bt9DOKF1buuYLrgZS-RU',
+    appId: '1:475778353428:ios:0d1750f841ac07a8f0da01',
+    messagingSenderId: '475778353428',
+    projectId: 'sync-player-akm512',
+    storageBucket: 'sync-player-akm512.appspot.com',
+  );
+
+  static String desktopClientId =
+      '475778353428-1505eir723s19cahv62b95b7car5up0t.apps.googleusercontent.com';
 }
