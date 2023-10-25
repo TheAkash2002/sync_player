@@ -27,7 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        return windows;
+        return macos;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -77,14 +77,6 @@ class DefaultFirebaseOptions {
     iosClientId:
         '475778353428-0rgij0g4ra9792dm40qja27afig25npp.apps.googleusercontent.com',
     iosBundleId: 'com.princeakash.syncPlayer.RunnerTests',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyB5SrhMNj3YDt8Bt9DOKF1buuYLrgZS-RU',
-    appId: '1:475778353428:ios:0d1750f841ac07a8f0da01',
-    messagingSenderId: '475778353428',
-    projectId: 'sync-player-akm512',
-    storageBucket: 'sync-player-akm512.appspot.com',
   );
 
   static String desktopClientId =

@@ -59,5 +59,11 @@
     		</array>
     	</dict>
     </array>
+    <!-- For just_audio -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
